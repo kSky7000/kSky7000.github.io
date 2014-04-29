@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <title>Mosaïque by Nikolay Skovorodin</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/ui-lightness/jquery-ui-1.10.4.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/cover.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="site-wrapper">
+
+    <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+            <div class="masthead clearfix">
+                <div class="inner">
+                    <h3 class="masthead-brand">Mosaïque</h3>
+                    <ul class="nav masthead-nav">
+                        <li class="active"><a href="#" data-toggle="modal" data-target="#myModal" >Again</a></li>
+                        <li><a href="#" class="solve">Solve</a></li>
+                        <li><a href="#" >Setting</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Modal Window -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">Preferences</h4>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Difficulty -->
+                            <h5>Choose puzzle difficulty:</h5>
+                            <label class="radio">
+                                <input type="radio" name="difficulty" id="difficulty" value="easy" checked>
+                                Easy (4x4)
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="difficulty" id="difficulty" value="medium">
+                                Medium (6x6)
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="difficulty" id="difficulty" value="hard">
+                                Hard (12x12)
+                            </label>
+                            <!-- Image -->
+                            <br>
+                            <h5>Choose picture to display:</h5>
+                            <div class="row">
+                                <div class="col-xs-6 col-md-3">
+                                    <a href="#" class="thumbnail" id="imageselect" name="1">
+                                        <img src="assets/1.jpg" alt="butterfly">
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 col-md-3">
+                                    <a href="#" class="thumbnail" id="imageselect" name="2">
+                                        <img src="assets/2.jpg" alt="mouse">
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 col-md-3">
+                                    <a href="#" class="thumbnail" id="imageselect" name="3">
+                                        <img src="assets/3.jpg" alt="raspberries">
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 col-md-3">
+                                    <a href="#" class="thumbnail" id="imageselect" name="4">
+                                        <img src="assets/4.jpg" alt="phoenix">
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 col-md-3">
+                                    <a href="#" class="thumbnail" id="imageselect" name="5">
+                                        <img src="assets/5.jpg" alt="sakura">
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 col-md-3">
+                                    <a href="#" class="thumbnail" id="imageselect" name="6">
+                                        <img src="assets/6.jpg" alt="ship">
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 col-md-3">
+                                    <a href="#" class="thumbnail" id="imageselect" name="7">
+                                        <img src="assets/7.jpg" alt="nyancat">
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 col-md-3">
+                                    <a href="#" class="thumbnail" id="imageselect" name="8">
+                                        <img src="assets/8.jpg" alt="winterforest">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save and launch</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Window -->
+            <div class="inner cover">
+                <div class="row">
+                    <div class="col-md-7 canvas">
+
+                    </div>
+                    <div class="col-md-5 blocks">
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jQuery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/jquery-ui-1.10.4.js"></script>
+<script src="js/jquery.cookie.js"></script>
+</body>
+</html>
