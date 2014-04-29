@@ -14,8 +14,10 @@ $( document ).ready(function(){
     var height = 150;           //Default height
     //First time open game or cookies disabled
     $.cookie.json = true;
-    if(!checkCookies())
+    if(!checkCookies()){
+        $('.thumbnail[name='+selImage+']').addClass('selected');
         $('#myModal').modal('show');
+    }
 
     //Click on image to select
     $('.thumbnail[id=imageselect]').click(function(e){
@@ -63,7 +65,9 @@ $( document ).ready(function(){
     function createPuzzle(){
         Image = "assets/"+selImage+".jpg";
         currentZIndex = 1;
-        $('.thumbnail[name='+selImage+']').addClass('selected');
+        if(!$('.thumbnail[name='+selImage+']').hasClass('selected')){
+            $('.thumbnail[name='+selImage+']').addClass('selected');
+        }
         if(difficulty == 'easy'){
             grid = 4;
             col_md = 'col-md-3';
