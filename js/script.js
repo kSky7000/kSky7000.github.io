@@ -181,7 +181,7 @@ $( document ).ready(function(){
 
     //Check cookies
     function checkCookies(){
-        if($.cookie('difficulty') == 'undefined'){
+        if($.cookie('has') != 'true'){
             return false;
         }
         difficulty = $.cookie('difficulty');
@@ -213,6 +213,9 @@ $( document ).ready(function(){
         coords = JSON.stringify(coords);
         localStorage.setItem("coords", coords);
         $.cookie('check', check, {
+            expires: 30
+        });
+        $.cookie('has', 'true', {
             expires: 30
         });
         $.cookie('right', right, {
