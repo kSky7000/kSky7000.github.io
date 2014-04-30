@@ -36,9 +36,10 @@
                 <div class="inner">
                     <h3 class="masthead-brand">Mosaïque</h3>
                     <ul class="nav masthead-nav">
+                        <li><a href="#" class="help" data-toggle="modal" data-target="#myModal_help" > <span class="glyphicon glyphicon-question-sign"></span></a> </li>
                         <li class="active"><a href="#" data-toggle="modal" data-target="#myModal" >Again</a></li>
-                        <li><a href="#" class="solve">Solve</a></li>
-                        <li><a href="#" >Setting</a></li>
+                        <li><a href="#" class="solve" >Solve</a></li>
+                        <li><a href="#" class="setting" data-toggle="modal" data-target="#myModal_setting" >Setting</a></li>
                     </ul>
                 </div>
             </div>
@@ -114,6 +115,52 @@
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                             <button type="button" class="btn btn-primary">Save and launch</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Help Modal Window -->
+            <div class="modal fade" id="myModal_help" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <!-- Displaying image -->
+                            <div class="row">
+                                <div class="col-md-offset-2 col-md-8">
+                                    <a href="#" class="thumbnail btn btn-default" data-dismiss="modal">
+                                        <img src="assets/1.jpg" alt="help" class="image_help">
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Setting modal window -->
+            <div class="modal fade" id="myModal_setting" tabindex="-1" role="dialog" aria-labelledby="myModalLabel_setting" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel_setting">Settings</h4>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Easymode -->
+                            <h5>Easymod:</h5>
+                            <label class="radio">
+                                <input type="radio" name="easymode" id="easymode" value="on">
+                                On
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="easymode" id="easymode" value="off"  checked>
+                                Off
+                            </label>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">Save</button>
                         </div>
                     </div>
                 </div>

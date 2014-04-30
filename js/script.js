@@ -30,8 +30,24 @@ $( document ).ready(function(){
         }
     });
 
+    //Click on setting modal window button save
     //Click on modal window button save
-    $('.modal-footer > .btn-primary').click(function(){
+    $('#myModal_setting > div > div > div.modal-footer > button.btn.btn-primary').click(function(){
+        var easymode = $('#easymode:checked').val();
+        if(easymode == 'on'){
+            $(".dblock").each(function(i,el){
+                $(el).empty();
+                $(el).append(i+"");
+            });
+        }else{
+            $(".dblock").each(function(i,el){
+                $(el).empty();
+            });
+        }
+        $('#myModal_setting').modal('hide');
+    });
+    //Click on modal window button save
+    $('#myModal > div > div > div.modal-footer > button.btn.btn-primary').click(function(){
         //Need to save preferences
         difficulty = $('#difficulty:checked').val();
         check = [];             //Array for right checking
@@ -64,6 +80,7 @@ $( document ).ready(function(){
     //Create Puzzle
     function createPuzzle(){
         Image = "assets/"+selImage+".jpg";
+        $('.image_help').attr('src', Image);
         currentZIndex = 1;
         if(!$('.thumbnail[name='+selImage+']').hasClass('selected')){
             $('.thumbnail[name='+selImage+']').addClass('selected');
@@ -100,7 +117,7 @@ $( document ).ready(function(){
         content = "";
 
         for(var i = 0; i < grid*grid; i++){
-            content += "<div class=\"dblock\" id=\""+i+"\">"+i+"<br /></div>";
+            content += "<div class=\"dblock\" id=\""+i+"\"><br /></div>";
         }
 
         $('.blocks ').empty();
